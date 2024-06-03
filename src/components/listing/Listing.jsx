@@ -416,12 +416,14 @@ import axios from "axios";
 import { useSearchGlobally } from "../../context/SearchContext";
 import { useCategory } from "../../context/CategoryContext";
 import { useCategoryPurpose } from "../../context/CategoryPurposeContext";
+import Loading from "../loading/Loading"; 
 
 const Listing = () => {
     const { searchQuery } = useSearchGlobally();
     const { selectedCategory } = useCategory();
     const { selectedCategoryPurpose } = useCategoryPurpose();
     const [listingData, setListingData] = useState([]);
+    const [loading, setLoading] = useState(true); // Loading state
 
     useEffect(() => {
         const fetchData = async () => {
@@ -434,6 +436,8 @@ const Listing = () => {
                 }
             } catch (error) {
                 toast.error("Something went wrong");
+            } finally {
+                setLoading(false); // Set loading to false regardless of success or failure
             }
         };
 
@@ -450,6 +454,11 @@ const Listing = () => {
             searchQuery ? data.address.toLowerCase().includes(searchQuery.toLowerCase()) : true
         );
     });
+
+    // Render loading component if data is still loading
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <div className="listing">
