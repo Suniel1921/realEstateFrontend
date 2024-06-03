@@ -1,0 +1,34 @@
+.createCategory{
+    color: var(--textWhite);
+    margin-top: 50px;
+}
+
+.categoryForm input{
+    width: 276px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.categoryPurposeBtn{
+    width: 126px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    margin: 34px;
+
+}
+
+.hrLine{
+    width: 1211px;
+}
+
+.manageCategoryList{
+    margin-top: 34px;
+}
+
+.manageCategoryList h3{
+    margin-bottom: 34px;
+}

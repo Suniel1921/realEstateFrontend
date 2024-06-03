@@ -1,0 +1,134 @@
+
+.slider_container {
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* position: relative; */
+  }
+
+
+  .slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+  }
+
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  
+
+  .text {
+    position: absolute;
+    top: 170px;
+    left: 220px; 
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 22;
+  }
+ 
+
+
+  .heading{
+    font-size: 54px;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .text p{
+    width: 50%;
+  }
+
+  .contact_btn{
+    background-color: var(--primaryColor);
+    color: var(--textWhite);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+
+
+
+
+  /* media queries start from here */
+
+  @media screen and (max-width: 1200px){
+    .text {
+      position: absolute;
+      top: 57px;
+      left: 71px;
+    }
+    .heading {
+      font-size: 41px;
+    }
+    
+  }
+
+  @media screen and (max-width: 950px) {
+    .heading {
+      font-size: 31px;
+    }
+    .text p {
+      width: 50%;
+      font-size: 20px;
+  }
+    
+  }
+
+
+
+  @media screen and (max-width: 670px) {
+    .heading {
+      font-size: 35px;
+      width: 100%;
+    }
+    .text p {
+      width: 100%;
+      font-size: 18px;
+  }    
+  }
+
+
+  @media screen and (max-width: 470px) {
+    .heading {
+      font-size: 23px;
+    }
+    text p {
+      width: 100%;
+      font-size: 14px;
+    }
+    .text {
+      top: 57px;
+      left: 9px;
+  }
+
+    
+  }
+  
+
+
+
+  
+  

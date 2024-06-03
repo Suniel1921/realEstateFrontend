@@ -1,0 +1,50 @@
+.navbar_container{
+    background-color: var(--secondaryBlueColor);   
+    /* padding: 20px; */
+}
+
+
+
+
+.navlinks li{
+    list-style-type: none;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--textWhite); 
+
+}
+
+
+.logoImg{
+    width: 10%;
+    border-radius: 50%;
+
+}
+
+.loggedInuser_container{
+    display: flex;
+    gap: 3rem;
+    color: var(--textWhite);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logoutButton{
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+
+
+@media screen and (max-width: 470px) {
+    .logoImg {
+        width: 20%;
+
+    }
+    
+}
