@@ -282,7 +282,7 @@ import * as Yup from 'yup';
 
 const RegisterProperty = () => {
   const [propertyListingCategories, setPropertyListingCategories] = useState([]);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_REACT_APP_URL}/api/v1/propertyListingCategory/all-property-listing`)
@@ -349,7 +349,7 @@ const RegisterProperty = () => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values, { resetForm }) => {
-      setLoading(true); // Set loading state to true
+      setLoading(true); 
       toast.loading('Uploading images... Please wait.');
 
       const formDataObj = new FormData();
