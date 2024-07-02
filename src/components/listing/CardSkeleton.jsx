@@ -1,10 +1,10 @@
 import React from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import '../listing/cardSkeleton.css'
+import '../listing/cardSkeleton.css';
 
 const CardSkeleton = () => {
-  const skeletonCount = 5; // Number of skeleton cards to display
+  const skeletonCount = 8; // Number of skeleton cards to display
 
   return (
     <SkeletonTheme>
