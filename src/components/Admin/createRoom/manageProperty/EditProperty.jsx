@@ -14,7 +14,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
     try {
       setLoading(true);
       await axios.put(
-        `${import.meta.env.VITE_REACT_APP_URL}/api/v1/upload/updateProperty/${property._id}`,
+        `${import.meta.env.VITE_REACT_APP_URL}/api/v1/userProperty/updateProperty/${property._id}`,
         values
       );
       // Update property data in parent component immediately
@@ -69,3 +69,6 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
 };
 
 export default EditProperty;
+
+
+

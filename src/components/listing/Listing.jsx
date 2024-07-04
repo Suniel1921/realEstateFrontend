@@ -8,6 +8,7 @@ import axios from "axios";
 import { useSearchGlobally } from "../../context/SearchContext";
 import { useCategoryPurpose } from "../../context/CategoryPurposeContext";
 import CardSkeleton from "./CardSkeleton";
+import Search from "../search/Search";
 
 const Listing = () => {
   const { searchQuery } = useSearchGlobally();
@@ -15,10 +16,11 @@ const Listing = () => {
   const [userProperty, setUserProperty] = useState([]);
   const [propertyListingCategories, setPropertyListingCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const selectedCategory = queryParams.get('category') || '';
+  const [sort, setSort] = useState('');
+  console.log(sort)
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -62,12 +64,16 @@ const Listing = () => {
   };
 
   const filteredUserProperty = userProperty.filter(filterProperties);
+   
+ 
 
   if (loading) {
     return <CardSkeleton />;
   }
 
   return (
+    <>
+    <Search/>
     <div className="listing">
       {propertyListingCategories.map((propertyCategory) => {
         const userPropertiesForCategory = filteredUserProperty.filter(data => data.propertyListingCategory === propertyCategory._id);
@@ -107,8 +113,15 @@ const Listing = () => {
           </div>
         );
       })}
-    </div>
+    </div></>
   );
 };
 
 export default Listing;
+
+
+
+
+
+
+
