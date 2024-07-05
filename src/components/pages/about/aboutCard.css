@@ -1,0 +1,137 @@
+.div-services{
+    padding:0;
+    margin:0;
+}
+
+.service_Container{
+    margin: 0.5rem 1.25rem 1.25rem 2%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+
+    
+}
+
+
+
+.div-box{
+    height: auto;
+    width: 30%;
+    border: 1px solid #D5DAE1;
+    padding:1rem;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    /* margin-right:1rem; */
+    margin-bottom:0.5rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+.icon{
+    height:4.5rem;
+    width:3rem;
+}
+.div-servicesd_par{
+    margin-top:0.5rem;
+    font-size:1.15rem;
+    line-height:1.5rem;
+    text-align:left;
+    color:#75869C;
+}
+
+@media(max-width:450px){
+    .service_Container {
+        /* margin: 0.6rem; */
+        width:100%;
+
+    }
+
+    .div-box {
+        width: 90%;
+        height: auto;
+        margin:0 5% 3% 5%;       
+        text-align: center;
+
+        /* padding: 1rem;
+        margin: 0.5rem 0rem 0.5rem 3rem;; */
+    }
+
+    .icon {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .div-servicesd_par {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+@media (min-width:450px) and (max-width:600px){
+    .service_Container {
+        flex-direction: row;
+        justify-content: center;
+        margin-left:6%;
+        /* width:80%; */
+    }
+
+    .div-box {
+        width: 80%;
+        height: auto;
+        margin: 0.5rem 10% 0.5rem 10%;
+    }
+
+    .icon {
+        height: 4rem;
+        width: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .div-servicesd_par {
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+    }
+}
+
+
+@media(min-width:600px) and (max-width:768px){
+    .service_Container{
+        margin:0 0 0 0;
+    }
+    .div-box {
+        width: 40%;
+        height: auto;
+        margin-left:1%;
+      }
+      .icon{
+        height:4.15rem;
+        width:2.75rem;
+    }
+    .title{
+        font-size:1.6rem;
+    }
+      .div-servicesd_par{
+        font-size:1.25rem;
+        line-height:1.25rem;
+      }
+}
+
+@media(min-width:768px) and (max-width:1100px){
+    .service_Container{
+        margin:0 0 0 0;
+    }
+    .div-box {
+        width: 40%;
+        height: auto;
+        margin-left:2%;
+      }
+}

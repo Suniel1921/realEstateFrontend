@@ -1,158 +1,233 @@
-:root {
-    --margin: 3rem;
-    --padding: 1rem;
-    --max-width: 40rem;
-    --divider-color: #ddd;
-    --text-align: justify;
+
+.Top-div {
+  height: 20rem;
+  width: 100%;
+  position:relative;
+}
+
+.Top-img {
+  height: 20rem;
+  width: 100%;
+  object-fit:fill;
+ 
+}
+
+.Top-content{
+  height:18rem;
+  width: 50%;
+  background-color: white;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+  left:25%;
+  margin-top:-10rem;
+  position: absolute;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.top-p{
+  padding:1rem;
+  margin-top:0.8rem;
+  font-size:20px   
+}
+.mid-content{
+  /* margin-top:10rem; */
+  height:15rem;
+  width:80%;
+  margin: 10rem 10% 0 10%;
+  text-align:center;
+  box-sizing:border-box;
+}
+.mid-contentp{
+  margin-bottom:2rem;
+  font-size:20px;
+  color:#75869c;
+}
+.service{
+  width:80%;
+  text-align:center;
+  margin: 3rem 10% 5rem 10%;
+  font-size:20px;
+}
+
+.servicep{
+  color:#75869c;
+  margin-top:0.8rem;
+}
+
+.div-box{
+  height: 17rem;
+  width: 21rem;
+  border: 1px solid #D5DAE1;
+  padding:1rem;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  margin-right:1rem;
+  
+}
+.div-servicesd{
+  margin: 0 1.25rem 1.25rem 5rem;
+  display:flex;
+}
+.icon{
+  height:4.5rem;
+  width:3rem;
+}
+.div-servicesd_par{
+  margin-top:0.5rem;
+  font-size:1.15rem;
+  line-height:1.5rem;
+  text-align:left;
+  color:#75869C;
+}
+
+
+
+
+@media(max-width:300px){
+  .Top-div{
+      width:100%;
   }
-  
-  #aboutContainer {
-    margin: var(--margin) var(--padding) 0 var(--padding);
+  .Top-content{
+      height: auto;
+      width:100%;
+      left:1rem;
+      right:0;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:2rem;
   }
-  
-  #upper-part {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: var(--padding);
+  .top-heading{
+      font-size:1.1rem;
   }
-  
-  #image-container {
-    margin-bottom: var(--margin);
+  .top-p{
+      padding:0.1rem;
+      margin-top: 0.2rem;
+      font-size:1rem;
   }
-  
-  #image {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
+  .mid-content{
+      height:auto;
+      width:80%;
+      margin-top:150%;
+      margin-left:3rem;
+      margin-right:1rem;
   }
-  
-  #text-section {
-    display: flex;
-    flex-direction: column;
+  .mid-contentp{
+      font-size:1rem;
+      padding:0;
   }
-  
-  #title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  .service{
+      width:80%;
+      margin-left:3rem;
+      margin-right:1rem;
   }
-  
-  #subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
+  .service-heading{
+      font-size:1.5rem;
   }
-  
-  #text-container {
-    margin-top: 1.75rem;
+  .servicep{
+      font-size:1rem;
+
   }
-  
-  #text {
-    max-width: var(--max-width);
-    text-align: var(--text-align);
-    margin-top: 1rem;
+}
+
+
+@media(min-width:300px) and (max-width:450px){
+  .Top-content{
+      height:auto;
+      width:28rem;
+      left:0%;
+      margin-top:0;
+      margin-bottom:3rem;
   }
-  
-  #content {
-    display: flex;
-    flex-wrap: wrap;
+  .top-heading{
+      font-size:1.2rem;
   }
-  
-  #content-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: var(--margin);
-    margin-right: var(--padding);
+  .top-p{
+      padding:0.1rem;
+      margin-top:0.25rem;
+      font-size:1rem;
   }
-  
-  #icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
+  .mid-content{
+      height:auto;
+      width:100%;
+      margin-top:18rem;
+      margin-left:3rem;
+      margin-right:2rem;
   }
-  
-  #icon {
-    height: 4rem;
+  .service{
+      width:100%;
+      margin-top:1rem;
+      margin-left:4rem;
+      margin-right:0rem;
   }
-  
-  #content-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 2.25rem;
+  .service-heading{
+      font-size:2rem;
+      text-align:center;
   }
-  
-  #content-text-container {
-    margin-top: 0.5rem;
-    text-align: var(--text-align);
+}
+
+@media(min-width:450px) and (max-width:600px){
+  .Top-content{
+      height:auto;
+      width:90%;
+      left:5%;
+      margin-top:0rem;
   }
-  
-  #content-text {
-    margin-bottom: 1.75rem;
-    margin-top: 1rem;
+  .top-p{
+      padding:0.2rem;
+      margin-top:0.5rem;
+      font-size:1.25rem;
   }
-  
-  #divider {
-    margin: 2rem 0;
-    border: 0;
-    border-top: 1px solid var(--divider-color);
+  .mid-content{
+      height:auto;
+      margin:95% 10% 0 10%;
   }
-  
-  /* Media Queries */
-  
-  @media (min-width: 768px) {
-    #container {
-      margin: var(--margin) 3rem 0 3rem;
-    }
-  
-    #image-container {
-      margin-right: var(--margin);
-      margin-bottom: 0;
-    }
-  
-    #text-section {
-      margin-right: var(--padding);
-    }
-  
-    #content-item {
-      width: 20rem;
-      padding: 0 2rem;
-    }
+
+  .service{
+      width:80%;
+
+
   }
-  
-  @media (max-width: 1024px) {
-    #container {
-      margin: var(--margin) 6rem 0 6rem;
-    }
-  
-    #text-container {
-      width: 100%;
-    }
-  
-    #text {
-      max-width: 80rem;
-    }
+  .service-heading{
+      font-size:2.25rem;
   }
-  
-  @media (max-width: 1280px) {
-    #container {
-      margin: var(--margin) var(--padding) 0 var(--padding);
-    }
-  
-    #upper-part {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  
-    #image-container {
-      margin-bottom: 2rem;
-    }
-  
-    #text-section {
-      display: flex;
-      flex-direction: column;
-    }
+}
+
+
+@media(min-width:600px) and (max-width:768px){
+  .Top-content{
+      height:auto;
+      width:75%;
+      left:16%;
+      margin-top:-5rem;
+      margin-bottom:6rem;
   }
-  
+  .mid-content{
+      margin-top:24rem;
+      margin-left:15%;
+      margin-right:10%;
+      width:75%;
+  }
+  .service{
+      width:75%;
+      margin-top:14rem;
+      margin-left:15%;
+      margin-right:10%;
+  }
+}
+@media(min-width:768px) and (max-width:1100px){
+  .Top-content{
+      height:auto;
+      width:70%;
+      left:15%;
+  }
+  .mid-content{
+      margin-top:25%
+  }
+  .service{
+      margin-top:16%;
+  }
+}
+
