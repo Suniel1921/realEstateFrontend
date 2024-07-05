@@ -176,7 +176,7 @@ beds: Yup.number().positive('Number of beds must be positive'),
               </div>
 
               <div className='price'>
-                <input type="string" name="price" placeholder='Enter Price' value={formik.values.price} onChange={formik.handleChange} />
+                <input type="text" name="price" placeholder='Enter Price' value={formik.values.price} onChange={formik.handleChange} />
                 {formik.touched.price && formik.errors.price ? <div className="error">{formik.errors.price}</div> : null}
               </div>
 

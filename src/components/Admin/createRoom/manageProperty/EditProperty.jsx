@@ -295,8 +295,6 @@
 
 
 
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Input, Button, Select, Checkbox, Upload, Switch } from "antd";
@@ -334,6 +332,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
       );
       getAllProperty();
       onCancel(); // Close the modal
+      toast.success("Property updated successfully!");
     } catch (error) {
       console.error("Error while updating property:", error);
       toast.error("Error while updating property");
@@ -354,7 +353,9 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
             onFinish={onFinish}
             initialValues={{
               ...property,
+              facilities: property.facilities || [],
               isVerified: property.isVerified,
+              images: property.images || [],
             }}
           >
             <Form.Item
@@ -371,7 +372,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
             >
               <Input.TextArea />
             </Form.Item>
-            <Form.Item
+            {/* <Form.Item
               label="Property Listing Category"
               name="propertyListingCategoryId"
               rules={[{ required: true, message: "Please select a property listing category" }]}
@@ -383,7 +384,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
                   </Option>
                 ))}
               </Select>
-            </Form.Item>
+            </Form.Item> */}
             <Form.Item
               label="Property Type"
               name="propertyType"
@@ -437,7 +438,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
             >
               <Input />
             </Form.Item>
-            <Form.Item
+            {/* <Form.Item
               label="Facilities"
               name="facilities"
             >
@@ -471,7 +472,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
                   </Checkbox>
                 ))}
               </Checkbox.Group>
-            </Form.Item>
+            </Form.Item> */}
             <Form.Item
               label="Furnishing"
               name="furnishing"
@@ -571,7 +572,7 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
               <Button type="primary" htmlType="submit" loading={loading}>
                 Update Property
               </Button>
-              <Button type="default" onClick={onCancel} style={{ marginLeft: "10px" }}>
+              <Button onClick={onCancel} style={{ marginLeft: "10px" }}>
                 Cancel
               </Button>
             </Form.Item>
@@ -583,11 +584,3 @@ const EditProperty = ({ property, onCancel, getAllProperty }) => {
 };
 
 export default EditProperty;
-
-
-
-
-
-
-
-
