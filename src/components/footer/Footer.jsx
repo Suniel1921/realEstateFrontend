@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
           <div className='social_media'>
             <h3>Social Media</h3>
-            <p>Stay connected with us through social media.</p>
+            {/* <p>Stay connected with us through social media.</p> */}
             <ul className='icons'>
             <Link to="https://www.facebook.com/" target="_blank"> <FaSquareFacebook /></Link>
             <Link to="https://www.instagram.com" target="_blank"> <FaSquareInstagram /></Link>

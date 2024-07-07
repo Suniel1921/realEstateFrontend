@@ -240,11 +240,7 @@ const SingleListing = () => {
                         <div className="thumbnail_container">
                             {/* Display thumbnails */}
                             {property.images.map((image, index) => (
-                                <img
-                                    key={index}
-                                    className="thumbnail_image"
-                                    src={image}
-                                    alt={`Property Thumbnail ${index}`}
+                                <img key={index} className="thumbnail_image" src={image} alt={`Property Thumbnail ${index}`}
                                     onClick={() => handleThumbnailClick(image)}
                                 />
                             ))}
